@@ -48,9 +48,9 @@ public class LibraryManagementSystem {
                 update.setInt(1, bookId);
                 update.executeUpdate();
 
-                System.out.println("✅ Book lent successfully!");
+                System.out.println("Book lent successfully!");
             } else {
-                System.out.println("❌ Book not available!");
+                System.out.println(" Book not available!");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,9 +78,9 @@ public class LibraryManagementSystem {
                 updateBook.setInt(1, bookId);
                 updateBook.executeUpdate();
 
-                System.out.println("✅ Book returned successfully!");
+                System.out.println(" Book returned successfully!");
             } else {
-                System.out.println("❌ No active lending record found for this book and user.");
+                System.out.println(" No active lending record found for this book and user.");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -119,10 +119,10 @@ public class LibraryManagementSystem {
                     returnBook(userIdR, bookIdR);
                     break;
                 case 4:
-                    System.out.println("👋 Exiting...");
+                    System.out.println(" Exiting...");
                     return;
                 default:
-                    System.out.println("❌ Invalid option.");
+                    System.out.println(" Invalid option.");
             }
         }
     }
